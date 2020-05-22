@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', 'PageController@about')
+    ->name('about');
+
+Route::get('/articles', 'ArticleController@index')
+    ->name('articles.index');
+
